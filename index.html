@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>パスワード入力</title>
+
+<style>
+body {
+  font-family: sans-serif;
+  background-color: #f0f0f0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 10px;
+  font-size: 16px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+  <h2>パスワードを入力してください</h2>
+  <input type="password" id="pw" placeholder="パスワード">
+  <button onclick="checkPassword()">送信</button>
+</div>
+
+<script>
+function checkPassword() {
+
+  const correctPassword = "122425";   // ← パスワード
+  const inputPassword = document.getElementById("pw").value;
+
+  if (inputPassword === correctPassword) {
+    window.location.href = "https://60292023302i-glitch.github.io/my-keiba2"; // ← 移動先URL
+  } else {
+    alert("パスワードが違います");
+  }
+}
+</script>
+
+</body>
+</html>
